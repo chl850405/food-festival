@@ -7,11 +7,17 @@
     "@popperjs/core": "^2.11.2",
     "bootstrap": "^4.3.1",
     "jquery": "^3.6.0",
+    "popper.js": "^1.16.0",
     "save": "^2.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
