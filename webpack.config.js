@@ -4,7 +4,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 
-  (module.exports = {
+const config ={
     //The entry point is the root of the bundle and the beginning of the dependency graph, so give it the relative path to the client's code
     entry: {
       app: "./assets/js/script.js",
@@ -21,7 +21,7 @@ const webpack = require("webpack");
     module: {
       rules: [
         {
-          test: /\.jpg$/,
+          test: /\.(png|jpe?g|gif)$/i,
           use: [
             {
               loader: 'file-loader',
@@ -69,4 +69,6 @@ const webpack = require("webpack");
     ],
     //in which we want webpack to run. By default, webpack wants to run in production mode
     mode: "development",
-  });
+  };
+  
+module.exports = config;
